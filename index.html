@@ -3,14 +3,211 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/stylesheet.css" />
-    <script src="js/script.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <title>AOI MIURA PORTFOLIO</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
-  <body>
-    <div class="text-center">
-      <h1 class="text-6xl font-bold text-blue-500">Hello World!</h1>
-    </div>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- ヘッダー -->
+    <header
+      class="bg-gradient-to-r from-blue-500 via-teal-400 to-green-500 text-white shadow-md"
+    >
+      <div
+        class="container mx-auto flex justify-between items-center py-6 px-8"
+      >
+        <h1 class="text-3xl font-extrabold">AOI MIURA PORTFOLIO</h1>
+        <nav>
+          <ul class="flex space-x-8 text-lg font-medium">
+            <li><a href="#about" class="hover:underline">About</a></li>
+            <li><a href="#projects" class="hover:underline">Projects</a></li>
+            <li><a href="#skills" class="hover:underline">Skills</a></li>
+            <li><a href="#contact" class="hover:underline">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- メインセクション -->
+    <main>
+      <!-- メインビジュアル -->
+      <div id="mainvisual" class="relative mb-20">
+        <img
+          src="img/mainvisual.jpg"
+          alt="テキスト"
+          class="w-full h-[600px] object-cover brightness-90"
+        />
+        <div
+          class="absolute inset-0 flex items-center justify-center text-center text-white bg-black bg-opacity-40"
+        >
+          <h2 class="text-5xl font-bold">Welcome to My Portfolio!</h2>
+        </div>
+      </div>
+
+      <!-- About meセクション -->
+      <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto">
+          <h2 class="text-4xl font-bold mb-6 text-center text-gray-800">
+            About Me
+          </h2>
+          <div
+            class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8"
+          >
+            <img
+              src="img/about.jpg"
+              alt="プロフィール写真"
+              class="w-32 h-32 rounded-full shadow-lg"
+            />
+            <p
+              class="text-lg text-gray-600 max-w-3xl text-center md:text-left leading-relaxed"
+            >
+              東京のCS専攻大学生。大学2年生の秋からWeb開発の基礎を学び始め、バックエンド領域に特に興味があります。
+              現在はPHPやLaravelを用いたフルスタックアプリ開発を学習中。将来的には、モダンな技術にも精通し、多様なプロジェクトに携わりたいと考えています。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projectsセクション -->
+      <section id="projects" class="py-20 bg-gray-100">
+        <div class="container mx-auto">
+          <h2 class="text-4xl font-bold text-center mb-10 text-gray-800">
+            Projects
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- プロジェクトカード -->
+            <div
+              class="bg-white shadow-md rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-xl"
+            >
+              <img
+                src="img/ToDo.png"
+                alt="プロジェクト画像"
+                class="rounded-t-lg"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2 text-gray-800">
+                  <a
+                    href="https://laravel-to-do.vercel.app/tasks"
+                    class="text-blue-500 hover:underline"
+                    >簡易タスク管理アプリ</a
+                  >
+                </h3>
+                <p class="text-gray-600">
+                  LaravelでのCRUD操作習得のために作成した簡易タスク管理アプリ。データベースの改善を進めています。
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white shadow-md rounded-lg p-6 flex items-center justify-center transform transition duration-300 hover:scale-105 hover:shadow-xl"
+            >
+              <h3 class="text-xl font-bold text-gray-500">Coming soon...</h3>
+            </div>
+            <div
+              class="bg-white shadow-md rounded-lg p-6 flex items-center justify-center transform transition duration-300 hover:scale-105 hover:shadow-xl"
+            >
+              <h3 class="text-xl font-bold text-gray-500">Coming soon...</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skillsセクション -->
+      <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto">
+          <h2 class="text-4xl font-bold mb-10 text-center text-gray-800">
+            Skills
+          </h2>
+
+          <!-- スキルグラフ -->
+          <div class="space-y-8">
+            <!-- スキル進捗バー -->
+            <div class="space-y-2">
+              <div class="flex justify-between text-gray-600">
+                <span>HTML</span>
+                <span>55%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full">
+                <div
+                  class="h-2 bg-blue-500 rounded-full"
+                  style="width: 55%"
+                ></div>
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <div class="flex justify-between text-gray-600">
+                <span>CSS</span>
+                <span>45%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full">
+                <div
+                  class="h-2 bg-green-500 rounded-full"
+                  style="width: 45%"
+                ></div>
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <div class="flex justify-between text-gray-600">
+                <span>JavaScript</span>
+                <span>45%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full">
+                <div
+                  class="h-2 bg-yellow-500 rounded-full"
+                  style="width: 45%"
+                ></div>
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <div class="flex justify-between text-gray-600">
+                <span>PHP</span>
+                <span>55%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full">
+                <div
+                  class="h-2 bg-red-500 rounded-full"
+                  style="width: 55%"
+                ></div>
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <div class="flex justify-between text-gray-600">
+                <span>Laravel</span>
+                <span>30%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full">
+                <div
+                  class="h-2 bg-teal-500 rounded-full"
+                  style="width: 30%"
+                ></div>
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <div class="flex justify-between text-gray-600">
+                <span>Git/Github</span>
+                <span>40%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full">
+                <div
+                  class="h-2 bg-orange-500 rounded-full"
+                  style="width: 40%"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <footer
+      class="bg-gradient-to-r from-blue-500 to-teal-500 text-white text-center py-6"
+    >
+      <p class="text-lg font-medium">&copy; 2025 Aoi Miura.</p>
+    </footer>
   </body>
 </html>
