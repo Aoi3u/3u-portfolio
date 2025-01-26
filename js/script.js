@@ -1,3 +1,4 @@
+// ダークモード設定
 document.documentElement.classList.toggle(
   "dark",
   localStorage.currentTheme == "dark" ||
