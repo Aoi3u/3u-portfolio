@@ -8,3 +8,7 @@ body {
   background-color: rgb(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
 }
+
+.cyan-grad {
+  background: linear-gradient(to right, #89faeb, #03bafc);
+}
