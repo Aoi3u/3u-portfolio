@@ -5,266 +5,232 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/stylesheet.css" />
     <link rel="icon" type="image/png" href="img/favicon.png" />
-    <title>Aoi Miura Portfolio</title>
-    <!-- グラフ表示 -->
+    <title>Aoi Miura | Web Developer</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   </head>
 
   <body
-    class="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-gray-800"
+    class="bg-gradient-to-r from-slate-950 via-blue-950 to-slate-950 text-gray-800"
   >
     <script>
-      AOS.init();
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
     </script>
-    <!-- ヘッダー -->
-    <header class="header text-white shadow-md w-full fixed z-50">
+
+    <header
+      class="header bg-slate-950/90 backdrop-blur-sm text-white shadow-lg w-full fixed z-50"
+    >
       <div
-        class="container mx-auto flex justify-between items-center py-2 px-4 md:px-0 lg:px-20"
+        class="container mx-auto flex justify-between items-center py-4 px-6 md:px-12 lg:px-24"
       >
         <h1>
-          <section class="text-sm md:text-base lg:text-base font-bold">
+          <div class="font-['Poppins'] text-sm md:text-base font-semibold">
             Aoi Miura
-          </section>
-          <section class="text-xs md:text-sm lg:text-sm font-medium">
-            -Exploring Web Development-
-          </section>
+          </div>
+          <div class="text-xs md:text-sm text-blue-300 font-medium">
+            Web Developer | Student
+          </div>
         </h1>
         <nav>
-          <ul
-            class="nav-list flex space-x-2 md:space-x-8 lg:space-x-12 text-xs md:text-sm lg:text-sm font-medium font-semibold"
-          >
-            <li><a href="#about" class="hover:underline">About</a></li>
-            <li><a href="#projects" class="hover:underline">Projects</a></li>
-            <li><a href="#skills" class="hover:underline">Skills</a></li>
+          <ul class="flex space-x-8 text-sm font-medium">
+            <li>
+              <a href="#about" class="hover:text-blue-300 transition">About</a>
+            </li>
+            <li>
+              <a href="#projects" class="hover:text-blue-300 transition"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a href="#skills" class="hover:text-blue-300 transition"
+                >Skills</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <!-- メイン -->
     <main>
-      <!-- メインビジュアル -->
-      <div id="mainvisual" class="relative mb-20">
-        <img
-          src="img/mainvisual.jpg"
-          alt="テキスト"
-          class="w-full h-[700px] md:h-[800px] lg:h-[800px] object-cover"
-        />
+      <section id="hero" class="relative h-screen flex items-center">
+        <div class="absolute inset-0"></div>
+        <div class="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
+          <h2
+            class="text-4xl md:text-6xl lg:text-7xl font-['Poppins'] font-bold leading-tight"
+            data-aos="fade-up"
+          >
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500"
+            >
+              Building Digital
+            </span>
+            <span class="block mt-2 text-white"> Solutions </span>
+          </h2>
+          <p
+            class="mt-6 text-blue-200 text-lg md:text-xl max-w-2xl"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            Learning and growing in web development.
+          </p>
+        </div>
+      </section>
+
+      <section id="about" class="py-24 mx-6 md:mx-12 lg:mx-24">
         <div
-          class="absolute inset-0 flex items-center px-8 bg-gradient-to-t from-slate-900/90"
+          class="bg-white/5 backdrop-blur-sm rounded-2xl p-12"
+          data-aos="fade-up"
         >
           <h2
-            class="text-3xl md:text-5xl lg:text-6xl font-extrabold max-w-4xl leading-tight [text-shadow:0_4px_24px_rgba(0,0,0,0.4)]"
-            data-aos="fade-up"
-            data-aos-duration="1200"
-          >
-            <span class="text-transparent bg-clip-text cyan-grad"
-              >Crafting Digital</span
-            >
-            <span class="block mt-4 text-white">Experiences</span>
-          </h2>
-        </div>
-      </div>
-
-      <!-- About meセクション -->
-      <section
-        id="about"
-        class="py-12 md:py-16 lg:py-20 mx-10 md:mx-20 lg:mx-40 bg-white shadow-md rounded-lg transform transition duration-300"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
-        <div class="container mx-auto">
-          <h2
-            class="text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold mb-10 text-center font-extrabold"
+            class="text-3xl md:text-4xl font-['Poppins'] font-bold text-white mb-12 text-center"
           >
             About Me
           </h2>
-          <div
-            class="mx-12 md:mx-20 flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-12"
-          >
+          <div class="flex flex-col md:flex-row items-center gap-12">
             <img
               src="img/about.jpg"
               alt="プロフィール写真"
-              class="w-28 md:w-36 lg:w-44 h-28 md:h-36 lg:h-44 rounded-full shadow-lg"
+              class="w-32 h-32 md:w-40 md:h-40 rounded-full ring-4 ring-blue-500/20"
             />
-            <div class="flex flex-col space-y-4">
-              <p
-                class="text-gray-700 text-base md:text-lg lg:text-xl font-bold"
-              >
-                三浦 碧生<br />
-              </p>
-              <p
-                class="text-xs md:text-sm lg:text-base text-gray-700 max-w-3xl text-left md:text-left leading-relaxed"
-              >
+            <div class="space-y-6 text-center md:text-left">
+              <h3 class="text-xl text-white font-medium">
+                三浦 碧生 / Aoi Miura
+              </h3>
+              <p class="text-blue-200 leading-relaxed max-w-2xl">
                 東京のCS専攻大学生。大学2年生の秋からWeb開発の基礎を学び始め、バックエンド領域に特に興味があります。
-                現在はPHPやLaravelを用いたフルスタックアプリ開発を学習中。また、領域に囚われずモダンな技術にも精通していきたいです。
-                将来的には、実務経験やチーム開発を通して多様なプロジェクトに携わりたいと考えています。<br />
+                個人プロジェクトや学習を通じて継続的に成長することを心がけています。
+                将来的には、実務経験を積みながら、意味のあるプロジェクトに貢献していきたいと考えています。
               </p>
-              <div
-                class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-2"
+              <a
+                href="https://github.com/Aoi3u"
+                class="inline-block text-blue-300 hover:text-blue-400 transition"
               >
+                GitHub Profile →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="py-24 mx-6 md:mx-12 lg:mx-24">
+        <h2
+          class="text-3xl md:text-4xl font-['Poppins'] font-bold text-white mb-12 text-center"
+        >
+          Recent Projects
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden transition-all duration-300 hover:transform hover:scale-105"
+          >
+            <img
+              src="img/ToDo.png"
+              alt="タスク管理アプリ"
+              class="w-full aspect-video object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl text-white font-medium mb-3">
                 <a
-                  href="https://github.com/Aoi3u"
-                  class="text-sm md:text-base lg:text-lg text-blue-600 hover:underline"
+                  href="https://laravel-to-do.vercel.app/tasks"
+                  class="hover:text-blue-300 transition"
                 >
-                  - GitHub
+                  タスク管理アプリ
                 </a>
-              </div>
+              </h3>
+              <p class="text-blue-200 text-sm">
+                LaravelでのCRUD操作習得のために作成した簡易タスク管理アプリ。データベースの改善を進めています。
+              </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- Projectsセクション -->
-      <section
-        id="projects"
-        class="py-12 md:py-16 lg:py-20 mt-10 mb-20"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
-        <div class="container mx-auto">
-          <h2
-            class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16 text-white font-extrabold"
-          >
-            Projects
-          </h2>
           <div
-            class="mx-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            class="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden transition-all duration-300 hover:transform hover:scale-105"
           >
-            <!-- プロジェクトカード -->
-            <div
-              class="bg-white shadow-md rounded-lg transform transition duration-300 hover:scale-110 hover:shadow-xl"
-            >
-              <img
-                src="img/ToDo.png"
-                alt="プロジェクト画像"
-                class="rounded-t-lg"
-              />
-              <div class="p-6">
-                <h3
-                  class="text-base md:text-lg lg:text-xl font-bold mb-2 text-gray-800"
+            <img
+              src="img/Blog.png"
+              alt="ブログアプリ"
+              class="w-full aspect-video object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl text-white font-medium mb-3">
+                <a
+                  href="https://tech-notes-waseda.vercel.app/"
+                  class="hover:text-blue-300 transition"
                 >
-                  <a
-                    href="https://laravel-to-do.vercel.app/tasks"
-                    class="text-blue-600 hover:underline"
-                    >簡易タスク管理アプリ</a
-                  >
-                </h3>
-                <p class="text-gray-700 text-xs md:text-sm lg:text-base">
-                  LaravelでのCRUD操作習得のために作成した簡易タスク管理アプリ。データベースの改善を進めています。
-                </p>
-              </div>
-            </div>
-            <div
-              class="bg-white shadow-md rounded-lg p-6 flex items-center justify-center transform transition duration-300 hover:scale-110 hover:shadow-xl"
-            >
-              <h3 class="text-base md:text-xl font-bold text-gray-500">
-                Coming soon...
+                  ブログアプリ
+                </a>
               </h3>
+              <p class="text-blue-200 text-sm">
+                Next.jsを用いて作成したブログアプリ。Markdown形式での投稿が可能で、supabaseを利用してデータを管理しています。
+              </p>
             </div>
-            <div
-              class="bg-white shadow-md rounded-lg p-6 flex items-center justify-center transform transition duration-300 hover:scale-110 hover:shadow-xl"
-            >
-              <h3 class="text-base md:text-xl font-bold text-gray-500">
-                Coming soon...
-              </h3>
-            </div>
+          </div>
+          <div
+            class="bg-white/5 backdrop-blur-sm rounded-2xl p-12 flex items-center justify-center transition-all duration-300 hover:transform hover:scale-105"
+          >
+            <p class="text-xl text-blue-300 font-medium">Coming soon...</p>
           </div>
         </div>
       </section>
 
-      <!-- Skillsセクション -->
-      <section
-        id="skills"
-        class="mb-20 py-12 md:py-16 lg:py-20 mx-10 md:mx-20 lg:mx-40 bg-white shadow-md rounded-lg transform transition duration-300"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
-        <div class="container mx-auto">
+      <section id="skills" class="py-24 mx-6 md:mx-12 lg:mx-24 mb-12">
+        <div
+          class="bg-white/5 backdrop-blur-sm rounded-2xl p-12"
+          data-aos="fade-up"
+        >
           <h2
-            class="text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center text-gray-800 font-extrabold"
+            class="text-3xl md:text-4xl font-['Poppins'] font-bold text-white mb-12 text-center"
           >
-            Skills
+            Technical Skills
           </h2>
-
-          <!-- スキルグラフ -->
-          <div
-            class="space-y-8 mx-12 md:mx-20 text-xs md:text-sm lg:text-base text-gray-800 font-semibold"
-          >
-            <!-- スキル進捗バー -->
+          <div class="space-y-8 max-w-3xl mx-auto">
             <div class="space-y-2">
-              <div class="flex justify-between">
-                <span>HTML</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full">
-                <div
-                  class="h-2 rounded-full cyan-grad"
-                  style="width: 55%"
-                ></div>
-              </div>
-            </div>
-            <div class="space-y-2">
-              <div class="flex justify-between">
-                <span>CSS (BootStrap/tailwindcss)</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full">
-                <div
-                  class="h-2 rounded-full cyan-grad"
-                  style="width: 45%"
-                ></div>
-              </div>
-            </div>
-            <div class="space-y-2">
-              <div class="flex justify-between">
+              <div class="flex justify-between text-sm text-blue-200">
                 <span>JavaScript</span>
               </div>
-              <div class="w-full rounded-full">
+              <div class="h-2 bg-white/10 rounded-full overflow-hidden">
                 <div
-                  class="h-2 bg-yellow-500 rounded-full cyan-grad"
-                  style="width: 45%"
+                  class="h-full w-[40%] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full"
                 ></div>
               </div>
             </div>
+
             <div class="space-y-2">
-              <div class="flex justify-between">
-                <span>PHP</span>
+              <div class="flex justify-between text-sm text-blue-200">
+                <span>TypeScript</span>
               </div>
-              <div class="w-full bg-gray-200 rounded-full">
+              <div class="h-2 bg-white/10 rounded-full overflow-hidden">
                 <div
-                  class="h-2 rounded-full cyan-grad"
-                  style="width: 55%"
+                  class="h-full w-[35%] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full"
                 ></div>
               </div>
             </div>
+
             <div class="space-y-2">
-              <div class="flex justify-between">
-                <span>Laravel</span>
+              <div class="flex justify-between text-sm text-blue-200">
+                <span>PHP/Laravel</span>
               </div>
-              <div class="w-full bg-gray-200 rounded-full">
+              <div class="h-2 bg-white/10 rounded-full overflow-hidden">
                 <div
-                  class="h-2 rounded-full cyan-grad"
-                  style="width: 30%"
+                  class="h-full w-[30%] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full"
                 ></div>
               </div>
             </div>
+
             <div class="space-y-2">
-              <div class="flex justify-between">
+              <div class="flex justify-between text-sm text-blue-200">
                 <span>Git/GitHub</span>
               </div>
-              <div class="w-full bg-gray-200 rounded-full">
+              <div class="h-2 bg-white/10 rounded-full overflow-hidden">
                 <div
-                  class="h-2 bg-orange-500 rounded-full cyan-grad"
-                  style="width: 40%"
+                  class="h-full w-[40%] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full"
                 ></div>
               </div>
             </div>
@@ -274,10 +240,8 @@
     </main>
 
     <!-- フッター -->
-    <footer class="footer text-white text-center py-4 md:py-4 lg:py-4">
-      <p class="text-xs md:text-sm lg:text-sm font-medium">
-        &copy; 2025 Aoi Miura.
-      </p>
+    <footer class="text-center py-8 text-blue-200 text-sm">
+      <p>&copy; 2025 Aoi Miura.</p>
     </footer>
   </body>
 </html>
